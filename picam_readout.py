@@ -14,7 +14,7 @@ class PicamReadoutMeasure(Measurement):
         #local logged quantities
         self.save_h5 = self.settings.New('save_h5', dtype = bool, initial=False)
         self.continuous = self.settings.New('continuous', dtype=bool, initial=True)
-        self.wl_calib = self.settings.New('wl_calib', dtype=str, initial='raman_shifts', 
+        self.wl_calib = self.settings.New('wl_calib', dtype=str, initial='pixels', 
                           choices=('pixels', 'raw_pixels', 'acton_spectrometer', 'wave_numbers', 'raman_shifts'))
         self.laser_wl = self.settings.New('laser_wl', initial = 532.0, vmin=1e-15)
         
